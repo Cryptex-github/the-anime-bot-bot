@@ -1,29 +1,38 @@
-import os
 import asyncio
-import aioredis
+import os
+
 import uvloop
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+
+
 import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-os.system("python3 webserver.py &")
-os.system("python3 hmm.py &")
-TOKEN = os.getenv("TOKEN")
 import difflib
 import re
 import sys
 import traceback
-from utils.HelpPaginator import HelpPaginator, CannotPaginate
-import discord
+from utils.HelpPaginator import HelpPaginator
 from utils.subclasses import AnimeBot
 from discord.ext import commands
-import functools
+
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+os.system("python3 webserver.py &")
+os.system("python3 hmm.py &")
+TOKEN = os.getenv("TOKEN")
+
+
 bot = AnimeBot()
-os.environ["JISHAKU_NO_DM_TRACEBACK"] = "True" 
+os.environ["JISHAKU_NO_DM_TRACEBACK"] = "True"
 os.environ["JISHAKU_NO_UNDERSCORE"] = "True"
+
+
 @bot.check
 async def check(ctx):
-  return not ctx.author.id == 694296778106863636
+    return not ctx.author.id == 694296778106863636
+
+
 bot.remove_command("help")
+
+
 @bot.command(name="help")
 async def _help(ctx, *, command: str = None):
     """Shows help about a command or the bot"""
@@ -47,11 +56,13 @@ async def _help(ctx, *, command: str = None):
 
         await p.paginate()
     except Exception as error:
-      print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
-      traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
-      await ctx.send(error)
+        print('Ignoring exception in command {}:'.format(ctx.command), file=sys.stderr)
+        traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
+        await ctx.send(error)
+
+
 for file in os.listdir("./cogs"):
-  if file.endswith(".py"):
-    bot.load_extension(f"cogs.{file[:-3]}")
+    if file.endswith(".py"):
+        bot.load_extension(f"cogs.{file[:-3]}")
 
 bot.run(TOKEN)

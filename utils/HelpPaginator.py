@@ -3,9 +3,14 @@
 
 import asyncio
 import discord
+import itertools
+import inspect
+import re
+
 
 class CannotPaginate(Exception):
     pass
+
 
 class Pages:
     """Implements a paginator that queries the user for the
@@ -32,6 +37,7 @@ class Pages:
     permissions: discord.Permissions
         Our permissions for the channel.
     """
+
     def __init__(self, ctx, *, entries, per_page=12, show_entry_count=True):
         self.bot = ctx.bot
         self.entries = entries
@@ -43,7 +49,7 @@ class Pages:
         if left_over:
             pages += 1
         self.maximum_pages = pages
-        self.embed = discord.Embed(colour=discord.Colour.random()) # any HEX color here
+        self.embed = discord.Embed(colour=discord.Colour.random())  # any HEX color here
         self.paginating = len(entries) > per_page
         self.show_entry_count = show_entry_count
         self.reaction_emojis = [
@@ -51,7 +57,7 @@ class Pages:
             ('\N{BLACK LEFT-POINTING TRIANGLE}', self.previous_page),
             ('\N{BLACK RIGHT-POINTING TRIANGLE}', self.next_page),
             ('\N{BLACK RIGHT-POINTING DOUBLE TRIANGLE WITH VERTICAL BAR}', self.last_page),
-            ('\N{INPUT SYMBOL FOR NUMBERS}', self.numbered_page ),
+            ('\N{INPUT SYMBOL FOR NUMBERS}', self.numbered_page),
             ('\N{BLACK SQUARE FOR STOP}', self.stop_pages),
             ('\N{INFORMATION SOURCE}', self.show_help),
         ]
@@ -142,8 +148,7 @@ class Pages:
 
     async def numbered_page(self):
         """lets you type a page number to go to"""
-        to_delete = []
-        to_delete.append(await self.channel.send('What page do you want to go to?'))
+        to_delete = [await self.channel.send('What page do you want to go to?')]
 
         def message_check(m):
             return m.author == self.author and \
@@ -171,9 +176,9 @@ class Pages:
 
     async def show_help(self):
         """shows this message"""
-        messages = ['Welcome to the interactive paginator!\n']
-        messages.append('This interactively allows you to see pages of text by navigating with ' \
-                        'reactions. They are as follows:\n')
+        messages = ['Welcome to the interactive paginator!\n',
+                    'This interactively allows you to see pages of text by navigating with '
+                    'reactions. They are as follows:\n']
 
         for (emoji, func) in self.reaction_emojis:
             messages.append(f'{emoji} {func.__doc__}')
@@ -239,14 +244,16 @@ class Pages:
             try:
                 pass
             except:
-                pass # can't remove it so don't bother doing so
+                pass  # can't remove it so don't bother doing so
 
             await self.match()
+
 
 class FieldPages(Pages):
     """Similar to Pages except entries should be a list of
     tuples having (key, value) to show as embed fields instead.
     """
+
     async def show_page(self, page, *, first=False):
         self.current_page = page
         entries = self.get_page(page)
@@ -282,16 +289,14 @@ class FieldPages(Pages):
 
             await self.message.add_reaction(reaction)
 
-import itertools
-import inspect
-import re
 
 # ?help
 # ?help Cog
 # ?help command
 #   -> could be a subcommand
 
-_mention = re.compile(r'<@\!?([0-9]{1,19})>')
+_mention = re.compile(r'<@!?([0-9]{1,19})>')
+
 
 def cleanup_prefix(bot, prefix):
     m = _mention.match(prefix)
@@ -301,12 +306,14 @@ def cleanup_prefix(bot, prefix):
             return f'@{user.name} '
     return prefix
 
+
 async def _can_run(cmd, ctx):
     try:
         return await cmd.can_run(ctx)
     except:
         return False
-    
+
+
 def _command_signature(cmd):
     # this is modified from discord.py source
     # which I wrote myself lmao
@@ -335,6 +342,7 @@ def _command_signature(cmd):
             result.append(f'<{name}>')
 
     return ' '.join(result)
+
 
 class HelpPaginator(Pages):
     def __init__(self, ctx, entries, *, per_page=4):
@@ -403,9 +411,10 @@ class HelpPaginator(Pages):
             else:
                 description = inspect.getdoc(description) or discord.Embed.Empty
 
-            nested_pages.extend((cog, description, plausible[i:i + per_page]) for i in range(0, len(plausible), per_page))
+            nested_pages.extend(
+                (cog, description, plausible[i:i + per_page]) for i in range(0, len(plausible), per_page))
 
-        self = cls(ctx, nested_pages, per_page=1) # this forces the pagination session
+        self = cls(ctx, nested_pages, per_page=1)  # this forces the pagination session
         self.prefix = cleanup_prefix(ctx.bot, ctx.prefix)
 
         # swap the get_page implementation with one that supports our style of pagination
@@ -429,9 +438,9 @@ class HelpPaginator(Pages):
         self.embed.clear_fields()
         self.embed.description = self.description
         self.embed.title = self.title
-        
+
         if hasattr(self, '_is_bot'):
-            value ='For more help, join the official bot [support server](https://discord.gg/BqneVkQDug)'
+            value = 'For more help, join the official bot [support server](https://discord.gg/BqneVkQDug)'
             self.embed.add_field(name='Support', value=value, inline=False)
 
         self.embed.set_footer(text=f'Use "{self.prefix}help command" for more info on a command.')
@@ -439,7 +448,8 @@ class HelpPaginator(Pages):
         signature = _command_signature
 
         for entry in entries:
-            self.embed.add_field(name=signature(entry), value=entry.short_doc or "No help provided for now try it yourself", inline=False)
+            self.embed.add_field(name=signature(entry),
+                                 value=entry.short_doc or "No help provided for now try it yourself", inline=False)
 
         if self.maximum_pages:
             self.embed.set_author(name=f'Page {page}/{self.maximum_pages} ({self.total} commands)')
@@ -491,8 +501,8 @@ class HelpPaginator(Pages):
             ('<argument>', 'This means the argument is __**required**__.'),
             ('[argument]', 'This means the argument is __**optional**__.'),
             ('[A|B]', 'This means the it can be __**either A or B**__.'),
-            ('[argument...]', 'This means you can have multiple arguments.\n' \
-                              'Now that you know the basics, it should be noted that...\n' \
+            ('[argument...]', 'This means you can have multiple arguments.\n'
+                              'Now that you know the basics, it should be noted that...\n'
                               '__**You do not type in the brackets!**__')
         )
 

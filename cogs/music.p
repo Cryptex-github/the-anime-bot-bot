@@ -48,7 +48,7 @@ class Music(commands.Cog):
         raise commands.CommandInvokeError('You need to be in my voicechannel.')
   
   async def track_hook(self, event):
-    if isinstance(event, lavalink.events.QueueEndEvent):
+    if isinstance(event, lavalink.Events.QueueEndEvent):
       await asyncio.sleep(30)
       guild_id = int(event.player.guild_id)
       await self.connect_to(guild_id, None)
