@@ -14,10 +14,6 @@ from asyncdagpi import ImageFeatures
 import typing
 
 
-class str(commands.Converter, str):
-    async def convert(self, ctx, arg):
-        return arg.strip("<>")
-
 class pictures(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -51,7 +47,7 @@ class pictures(commands.Cog):
         elif isinstance(thing, (discord.Member, discord.User)):
             url = str(thing.avatar_url_as(format="png"))
         else:
-            thing = str(thing)
+            thing = str(image).strip("<>")
             if thing.startswith("http") or thing.startswith(
                     "https") or thing.startswith("www"):
                 url = thing
