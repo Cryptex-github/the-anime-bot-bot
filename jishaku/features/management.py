@@ -135,20 +135,15 @@ class ManagementFeature(Feature):
             else:
                 text += f"\nWebsocket latency: {self.bot.latency * 1000:.2f}ms"
 
+            before = time.perf_counter()
             # Now do the actual request and reading
             if message:
-                before = time.perf_counter()
                 await message.edit(content=text)
-                after = time.perf_counter()
-
-                api_readings.append(after - before)
             else:
-                before = time.perf_counter()
                 message = await ctx.send(content=text)
-                after = time.perf_counter()
+            after = time.perf_counter()
 
-                api_readings.append(after - before)
-
+            api_readings.append(after - before)
             # Ignore websocket latencies that are 0 or negative because they usually mean we've got bad heartbeats
             if self.bot.latency > 0.0:
                 websocket_readings.append(self.bot.latency)

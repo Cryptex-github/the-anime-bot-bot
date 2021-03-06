@@ -15,7 +15,7 @@ class web(commands.Cog):
         async with self.bot.session.ws_connect("wss://gateway.botlist.space") as ws:
             self.bot.loop.create_task(self.identify(ws))
             self.bot.loop.create_task(self.heartbeat(ws))
-            async for message in ws:
+            async for _ in ws:
                 pass
 
     async def identify(self, ws):
