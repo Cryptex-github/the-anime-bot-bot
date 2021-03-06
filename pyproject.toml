@@ -6,7 +6,7 @@ authors = ["cryptex"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-pandas = "^1.2.2"
+pandas = "^1.2.3"
 asyncpg = "^0.22.0"
 cryptography = "^3.4.6"
 youtube-dl = "^2021.2.22"
