@@ -36,7 +36,7 @@ asyncdagpi = "^3.2.2"
 aiozaneapi = "^1.6"
 eight-ball = "^3.0.3"
 twemoji-parser = "^0.4.3"
-polaroid = "^0.2.10"
+polaroid = "^0.3.1"
 PyNaCl = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
