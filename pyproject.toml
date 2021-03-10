@@ -41,7 +41,7 @@ PyNaCl = "^1.4.0"
 aiofile = "^3.5.0"
 cchardet = "^2.1.7"
 aiodns = "^2.0.0"
-polaroid = "^0.3.1"
+polaroid = "^0.3.2"
 Brotli = "^1.0.9"
 
 [tool.poetry.dev-dependencies]

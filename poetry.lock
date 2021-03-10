@@ -1,21 +1,21 @@
 [[package]]
-category = "main"
-description = "Simple DNS resolver for asyncio"
 name = "aiodns"
+version = "2.0.0"
+description = "Simple DNS resolver for asyncio"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2.0.0"
 
 [package.dependencies]
 pycares = ">=3.0.0"
 
 [[package]]
-category = "main"
-description = "Asynchronous file operations."
 name = "aiofile"
+version = "3.5.0"
+description = "Asynchronous file operations."
+category = "main"
 optional = false
 python-versions = ">3.4.*, <4"
-version = "3.5.0"
 
 [package.dependencies]
 caio = ">=0.8.0,<0.9.0"
@@ -24,12 +24,12 @@ caio = ">=0.8.0,<0.9.0"
 develop = ["aiomisc", "asynctest", "pytest", "pytest-cov"]
 
 [[package]]
-category = "main"
-description = "Async http client/server framework (asyncio)"
 name = "aiohttp"
+version = "3.7.4.post0"
+description = "Async http client/server framework (asyncio)"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "3.7.4.post0"
 
 [package.dependencies]
 async-timeout = ">=3.0,<4.0"
@@ -43,90 +43,89 @@ yarl = ">=1.0,<2.0"
 speedups = ["aiodns", "brotlipy", "cchardet"]
 
 [[package]]
-category = "main"
-description = "asyncio (PEP 3156) Redis support"
 name = "aioredis"
+version = "1.3.1"
+description = "asyncio (PEP 3156) Redis support"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.3.1"
 
 [package.dependencies]
 async-timeout = "*"
 hiredis = "*"
 
 [[package]]
-category = "main"
-description = "An async wrapper made in Python for Zane API."
 name = "aiozaneapi"
-optional = false
-python-versions = "*"
 version = "1.6"
-
-[[package]]
+description = "An async wrapper made in Python for Zane API."
 category = "main"
-description = "A configurable sidebar-enabled Sphinx theme"
-name = "alabaster"
 optional = false
 python-versions = "*"
-version = "0.7.12"
 
 [[package]]
+name = "alabaster"
+version = "0.7.12"
+description = "A configurable sidebar-enabled Sphinx theme"
 category = "main"
-description = "An easy to use Python Wrapper for the AlexFlipnote API"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "alexflipnote.py"
+version = "2.3.0"
+description = "An easy to use Python Wrapper for the AlexFlipnote API"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "2.3.0"
 
 [package.dependencies]
 aiohttp = "*"
 
 [[package]]
-category = "main"
-description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 name = "appdirs"
+version = "1.4.4"
+description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.4.4"
 
 [[package]]
-category = "main"
-description = "An AST unparser for Python"
 name = "astunparse"
+version = "1.6.3"
+description = "An AST unparser for Python"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.6.3"
 
 [package.dependencies]
 six = ">=1.6.1,<2.0"
-wheel = ">=0.23.0,<1.0"
 
 [[package]]
-category = "main"
-description = "Timeout context manager for asyncio programs"
 name = "async-timeout"
+version = "3.0.1"
+description = "Timeout context manager for asyncio programs"
+category = "main"
 optional = false
 python-versions = ">=3.5.3"
-version = "3.0.1"
 
 [[package]]
-category = "main"
-description = "An Asynchronos API wrapper for https://dagpi.xyz"
 name = "asyncdagpi"
+version = "3.3.0"
+description = "An Asynchronos API wrapper for https://dagpi.xyz"
+category = "main"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "3.3.0"
 
 [package.dependencies]
 aiohttp = ">=3.7.3,<4.0.0"
 
 [[package]]
-category = "main"
-description = "An asyncio PostgreSQL driver"
 name = "asyncpg"
+version = "0.22.0"
+description = "An asyncio PostgreSQL driver"
+category = "main"
 optional = false
 python-versions = ">=3.5.0"
-version = "0.22.0"
 
 [package.extras]
 dev = ["Cython (>=0.29.20,<0.30.0)", "pytest (>=3.6.0)", "Sphinx (>=1.7.3,<1.8.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)", "sphinx-rtd-theme (>=0.2.4,<0.3.0)", "pycodestyle (>=2.5.0,<2.6.0)", "flake8 (>=3.7.9,<3.8.0)", "uvloop (>=0.14.0,<0.15.0)"]
@@ -134,254 +133,251 @@ docs = ["Sphinx (>=1.7.3,<1.8.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)", "sp
 test = ["pycodestyle (>=2.5.0,<2.6.0)", "flake8 (>=3.7.9,<3.8.0)", "uvloop (>=0.14.0,<0.15.0)"]
 
 [[package]]
-category = "main"
-description = "Classes Without Boilerplate"
 name = "attrs"
+version = "20.3.0"
+description = "Classes Without Boilerplate"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "20.3.0"
 
 [package.extras]
-dev = ["coverage (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "furo", "sphinx", "pre-commit"]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "furo", "sphinx", "pre-commit"]
 docs = ["furo", "sphinx", "zope.interface"]
-tests = ["coverage (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface"]
-tests_no_zope = ["coverage (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six"]
+tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface"]
+tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six"]
 
 [[package]]
-category = "main"
-description = "Internationalization utilities"
 name = "babel"
+version = "2.9.0"
+description = "Internationalization utilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.9.0"
 
 [package.dependencies]
 pytz = ">=2015.7"
 
 [[package]]
-category = "main"
-description = "Screen-scraping library"
 name = "beautifulsoup4"
+version = "4.9.3"
+description = "Screen-scraping library"
+category = "main"
 optional = false
 python-versions = "*"
-version = "4.9.3"
 
 [package.dependencies]
-[package.dependencies.soupsieve]
-python = ">=3.0"
-version = ">1.2"
+soupsieve = {version = ">1.2", markers = "python_version >= \"3.0\""}
 
 [package.extras]
 html5lib = ["html5lib"]
 lxml = ["lxml"]
 
 [[package]]
-category = "main"
-description = "asyncio-based rfc2812-compliant IRC Client"
 name = "bottom"
-optional = false
-python-versions = "*"
 version = "2.2.0"
+description = "asyncio-based rfc2812-compliant IRC Client"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
-category = "main"
-description = "Bash-style brace expansion for Python"
 name = "braceexpand"
-optional = false
-python-versions = "*"
 version = "0.1.6"
+description = "Bash-style brace expansion for Python"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
-category = "main"
-description = "Python bindings for the Brotli compression library"
 name = "brotli"
+version = "1.0.9"
+description = "Python bindings for the Brotli compression library"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.0.9"
 
 [[package]]
-category = "main"
-description = "Dummy package for Beautiful Soup"
 name = "bs4"
+version = "0.0.1"
+description = "Dummy package for Beautiful Soup"
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.0.1"
 
 [package.dependencies]
 beautifulsoup4 = "*"
 
 [[package]]
-category = "main"
-description = "Asynchronous file IO for Linux Posix and Windows."
 name = "caio"
+version = "0.8.0"
+description = "Asynchronous file IO for Linux Posix and Windows."
+category = "main"
 optional = false
 python-versions = ">=3.5.*, <4"
-version = "0.8.0"
 
 [package.extras]
 develop = ["aiomisc", "pytest", "pytest-cov"]
 
 [[package]]
-category = "main"
-description = "cChardet is high speed universal character encoding detector."
 name = "cchardet"
-optional = false
-python-versions = "*"
 version = "2.1.7"
+description = "cChardet is high speed universal character encoding detector."
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
-category = "main"
-description = "Python package for providing Mozilla's CA Bundle."
 name = "certifi"
+version = "2020.12.5"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
 optional = false
 python-versions = "*"
-version = "2020.12.5"
 
 [[package]]
-category = "main"
-description = "Foreign Function Interface for Python calling C code."
 name = "cffi"
+version = "1.14.5"
+description = "Foreign Function Interface for Python calling C code."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.14.5"
 
 [package.dependencies]
 pycparser = "*"
 
 [[package]]
-category = "main"
-description = "Validate configuration and produce human readable error messages."
 name = "cfgv"
+version = "3.2.0"
+description = "Validate configuration and produce human readable error messages."
+category = "main"
 optional = false
 python-versions = ">=3.6.1"
-version = "3.2.0"
 
 [[package]]
-category = "main"
-description = "Universal encoding detector for Python 2 and 3"
 name = "chardet"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "4.0.0"
+description = "Universal encoding detector for Python 2 and 3"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
-category = "main"
-description = "Composable command line interface toolkit"
 name = "click"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 version = "7.1.2"
-
-[[package]]
+description = "Composable command line interface toolkit"
 category = "main"
-description = "Cross-platform colored terminal text."
-marker = "platform_system == \"Windows\" or sys_platform == \"win32\""
-name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.4.4"
 
 [[package]]
+name = "colorama"
+version = "0.4.4"
+description = "Cross-platform colored terminal text."
 category = "main"
-description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
 name = "cryptography"
+version = "3.4.6"
+description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "3.4.6"
 
 [package.dependencies]
 cffi = ">=1.12"
 
 [package.extras]
-docs = ["sphinx (>=1.6.5,<1.8.0 || >1.8.0,<3.1.0 || >3.1.0,<3.1.1 || >3.1.1)", "sphinx-rtd-theme"]
+docs = ["sphinx (>=1.6.5,!=1.8.0,!=3.1.0,!=3.1.1)", "sphinx-rtd-theme"]
 docstest = ["doc8", "pyenchant (>=1.6.11)", "twine (>=1.12.0)", "sphinxcontrib-spelling (>=4.0.1)"]
 pep8test = ["black", "flake8", "flake8-import-order", "pep8-naming"]
 sdist = ["setuptools-rust (>=0.11.4)"]
 ssh = ["bcrypt (>=3.1.5)"]
-test = ["pytest (>=6.0)", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,<3.79.2 || >3.79.2)"]
+test = ["pytest (>=6.0)", "pytest-cov", "pytest-subtests", "pytest-xdist", "pretend", "iso8601", "pytz", "hypothesis (>=1.11.4,!=3.79.2)"]
 
 [[package]]
-category = "main"
-description = "A mirror package for discord.py. Please install that instead."
 name = "discord"
+version = "1.0.1"
+description = "A mirror package for discord.py. Please install that instead."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.0.1"
 
 [package.dependencies]
 "discord.py" = ">=1.0.1"
 
 [[package]]
-category = "main"
-description = "A Python wrapper for the Discord API"
 name = "discord.py"
+version = "1.6.0"
+description = "A Python wrapper for the Discord API"
+category = "main"
 optional = false
 python-versions = ">=3.5.3"
-version = "1.6.0"
 
 [package.dependencies]
 aiohttp = ">=3.6.0,<3.8.0"
 
 [package.extras]
-docs = ["sphinx (3.0.3)", "sphinxcontrib-trio (1.1.2)", "sphinxcontrib-websupport"]
+docs = ["sphinx (==3.0.3)", "sphinxcontrib-trio (==1.1.2)", "sphinxcontrib-websupport"]
 voice = ["PyNaCl (>=1.3.0,<1.5)"]
 
 [[package]]
-category = "main"
-description = "Distribution utilities"
 name = "distlib"
+version = "0.3.1"
+description = "Distribution utilities"
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.3.1"
 
 [[package]]
-category = "main"
-description = "Docutils -- Python Documentation Utilities"
 name = "docutils"
+version = "0.16"
+description = "Docutils -- Python Documentation Utilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.16"
 
 [[package]]
-category = "main"
-description = "8ball response generator."
 name = "eight-ball"
+version = "3.0.3"
+description = "8ball response generator."
+category = "main"
 optional = false
 python-versions = ">=3.4"
-version = "3.0.3"
 
 [[package]]
-category = "main"
-description = "Emoji for Python"
 name = "emoji"
+version = "1.2.0"
+description = "Emoji for Python"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.2.0"
 
 [package.extras]
 dev = ["pytest", "coverage", "coveralls"]
 
 [[package]]
-category = "main"
-description = "A platform independent file lock."
 name = "filelock"
+version = "3.0.12"
+description = "A platform independent file lock."
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.0.12"
 
 [[package]]
-category = "main"
-description = "A simple framework for building complex web applications."
 name = "flask"
+version = "1.1.2"
+description = "A simple framework for building complex web applications."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "1.1.2"
 
 [package.dependencies]
-Jinja2 = ">=2.10.1"
-Werkzeug = ">=0.15"
 click = ">=5.1"
 itsdangerous = ">=0.24"
+Jinja2 = ">=2.10.1"
+Werkzeug = ">=0.15"
 
 [package.extras]
 dev = ["pytest", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
@@ -389,12 +385,12 @@ docs = ["sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-
 dotenv = ["python-dotenv"]
 
 [[package]]
-category = "main"
-description = "gTTS (Google Text-to-Speech), a Python library and CLI tool to interface with Google Translate text-to-speech API"
 name = "gtts"
+version = "2.2.2"
+description = "gTTS (Google Text-to-Speech), a Python library and CLI tool to interface with Google Translate text-to-speech API"
+category = "main"
 optional = false
 python-versions = ">=2.7"
-version = "2.2.2"
 
 [package.dependencies]
 click = "*"
@@ -403,64 +399,61 @@ six = "*"
 
 [package.extras]
 docs = ["sphinx", "sphinx-autobuild", "sphinx-rtd-theme", "sphinx-click", "towncrier"]
-tests = ["pytest (4.6.11)", "pytest-cov", "flake8", "testfixtures", "mock", "six"]
+tests = ["pytest (==4.6.11)", "pytest-cov", "flake8", "testfixtures", "mock", "six"]
 
 [[package]]
-category = "main"
-description = "Python wrapper for hiredis"
 name = "hiredis"
+version = "1.1.0"
+description = "Python wrapper for hiredis"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.1.0"
 
 [[package]]
-category = "main"
-description = "Python humanize utilities"
 name = "humanize"
+version = "3.2.0"
+description = "Python humanize utilities"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "3.2.0"
-
-[package.dependencies]
-setuptools = "*"
 
 [package.extras]
 tests = ["freezegun", "pytest", "pytest-cov"]
 
 [[package]]
-category = "main"
-description = "File identification library for Python"
 name = "identify"
+version = "2.1.0"
+description = "File identification library for Python"
+category = "main"
 optional = false
 python-versions = ">=3.6.1"
-version = "2.1.0"
 
 [package.extras]
 license = ["editdistance"]
 
 [[package]]
-category = "main"
-description = "Internationalized Domain Names in Applications (IDNA)"
 name = "idna"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.10"
-
-[[package]]
+description = "Internationalized Domain Names in Applications (IDNA)"
 category = "main"
-description = "Getting image size from png/jpeg/jpeg2000/gif file"
-name = "imagesize"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.2.0"
 
 [[package]]
+name = "imagesize"
+version = "1.2.0"
+description = "Getting image size from png/jpeg/jpeg2000/gif file"
 category = "main"
-description = "Parses a superset of Python allowing for inline module import expressions"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
 name = "import-expression"
+version = "1.1.4"
+description = "Parses a superset of Python allowing for inline module import expressions"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.1.4"
 
 [package.dependencies]
 astunparse = ">=1.6.3,<2.0.0"
@@ -469,20 +462,20 @@ astunparse = ">=1.6.3,<2.0.0"
 test = ["pytest", "pytest-cov"]
 
 [[package]]
-category = "main"
-description = "Various helpers to pass data to untrusted environments and back."
 name = "itsdangerous"
+version = "1.1.0"
+description = "Various helpers to pass data to untrusted environments and back."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.1.0"
 
 [[package]]
-category = "main"
-description = "A very fast and expressive template engine."
 name = "jinja2"
+version = "2.11.3"
+description = "A very fast and expressive template engine."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "2.11.3"
 
 [package.dependencies]
 MarkupSafe = ">=0.23"
@@ -491,12 +484,12 @@ MarkupSafe = ">=0.23"
 i18n = ["Babel (>=0.8)"]
 
 [[package]]
-category = "main"
-description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
 name = "lxml"
+version = "4.6.2"
+description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, != 3.4.*"
-version = "4.6.2"
 
 [package.extras]
 cssselect = ["cssselect (>=0.7)"]
@@ -505,12 +498,12 @@ htmlsoup = ["beautifulsoup4"]
 source = ["Cython (>=0.29.7)"]
 
 [[package]]
-category = "main"
-description = "Download lyrics and metadata from Genius.com"
 name = "lyricsgenius"
+version = "3.0.0"
+description = "Download lyrics and metadata from Genius.com"
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.0.0"
 
 [package.dependencies]
 beautifulsoup4 = ">=4.6.0"
@@ -522,28 +515,28 @@ dev = ["sphinx (>=3.3,<4.0)", "sphinx-rtd-theme", "tox (>=3.2,<4.0)", "doc8", "f
 docs = ["sphinx (>=3.3,<4.0)", "sphinx-rtd-theme"]
 
 [[package]]
-category = "main"
-description = "Safely add untrusted strings to HTML/XML markup."
 name = "markupsafe"
+version = "1.1.1"
+description = "Safely add untrusted strings to HTML/XML markup."
+category = "main"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "1.1.1"
 
 [[package]]
-category = "main"
-description = "multidict implementation"
 name = "multidict"
+version = "5.1.0"
+description = "multidict implementation"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "5.1.0"
 
 [[package]]
-category = "main"
-description = "A small simple wrapper around the mystb.in API."
 name = "mystbin.py"
+version = "1.0.1"
+description = "A small simple wrapper around the mystb.in API."
+category = "main"
 optional = false
 python-versions = ">=3.6,<4.0"
-version = "1.0.1"
 
 [package.dependencies]
 aiohttp = ">=3.6.2,<4.0.0"
@@ -552,47 +545,50 @@ aiohttp = ">=3.6.2,<4.0.0"
 requests = ["requests (>=2.24.0,<3.0.0)"]
 
 [[package]]
-category = "main"
-description = "Node.js virtual environment builder"
 name = "nodeenv"
+version = "1.5.0"
+description = "Node.js virtual environment builder"
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.5.0"
 
 [[package]]
-category = "main"
-description = "NumPy is the fundamental package for array computing with Python."
 name = "numpy"
+version = "1.20.1"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "1.20.1"
 
 [[package]]
-category = "main"
-description = "Wrapper package for OpenCV python bindings."
 name = "opencv-python"
+version = "4.5.1.48"
+description = "Wrapper package for OpenCV python bindings."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "4.5.1.48"
+
+[package.dependencies]
+numpy = ">=1.19.3"
 
 [[package]]
-category = "main"
-description = "Core utilities for Python packages"
 name = "packaging"
+version = "20.9"
+description = "Core utilities for Python packages"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "20.9"
 
 [package.dependencies]
 pyparsing = ">=2.0.2"
 
 [[package]]
-category = "main"
-description = "Powerful data structures for data analysis, time series, and statistics"
 name = "pandas"
+version = "1.2.3"
+description = "Powerful data structures for data analysis, time series, and statistics"
+category = "main"
 optional = false
 python-versions = ">=3.7.1"
-version = "1.2.3"
 
 [package.dependencies]
 numpy = ">=1.16.5"
@@ -603,42 +599,42 @@ pytz = ">=2017.3"
 test = ["pytest (>=5.0.1)", "pytest-xdist", "hypothesis (>=3.58)"]
 
 [[package]]
-category = "main"
-description = "Python Imaging Library (Fork)"
 name = "pillow"
+version = "8.1.2"
+description = "Python Imaging Library (Fork)"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "8.1.2"
 
 [[package]]
-category = "main"
-description = "plugin and hook calling mechanisms for python"
 name = "pluggy"
+version = "0.13.1"
+description = "plugin and hook calling mechanisms for python"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.13.1"
 
 [package.extras]
 dev = ["pre-commit", "tox"]
 
 [[package]]
-category = "main"
-description = "Hyper Fast and safe image manipulation library for python. Powered by rust."
 name = "polaroid"
+version = "0.3.2"
+description = "Hyper Fast and safe image manipulation library for python. Powered by rust."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "0.3.1"
 
 [package.dependencies]
 Sphinx = ">=3.4.3,<4.0.0"
 
 [[package]]
-category = "main"
-description = "A framework for managing and maintaining multi-language pre-commit hooks."
 name = "pre-commit"
+version = "2.10.1"
+description = "A framework for managing and maintaining multi-language pre-commit hooks."
+category = "main"
 optional = false
 python-versions = ">=3.6.1"
-version = "2.10.1"
 
 [package.dependencies]
 cfgv = ">=2.0.0"
@@ -649,31 +645,31 @@ toml = "*"
 virtualenv = ">=20.0.8"
 
 [[package]]
-category = "main"
-description = "Cross-platform lib for process and system monitoring in Python."
 name = "psutil"
+version = "5.8.0"
+description = "Cross-platform lib for process and system monitoring in Python."
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "5.8.0"
 
 [package.extras]
 test = ["ipaddress", "mock", "unittest2", "enum34", "pywin32", "wmi"]
 
 [[package]]
-category = "main"
-description = "library with cross-python path, ini-parsing, io, code, log facilities"
 name = "py"
+version = "1.10.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.10.0"
 
 [[package]]
-category = "main"
-description = "Python interface for c-ares"
 name = "pycares"
+version = "3.1.1"
+description = "Python interface for c-ares"
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.1.1"
 
 [package.dependencies]
 cffi = ">=1.5.0"
@@ -682,36 +678,36 @@ cffi = ">=1.5.0"
 idna = ["idna (>=2.1)"]
 
 [[package]]
-category = "main"
-description = "C parser in Python"
 name = "pycparser"
+version = "2.20"
+description = "C parser in Python"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "2.20"
 
 [[package]]
-category = "main"
-description = "Pure-python FIGlet implementation"
 name = "pyfiglet"
+version = "0.8.post1"
+description = "Pure-python FIGlet implementation"
+category = "main"
 optional = false
 python-versions = "*"
-version = "0.8.post1"
 
 [[package]]
-category = "main"
-description = "Pygments is a syntax highlighting package written in Python."
 name = "pygments"
+version = "2.8.1"
+description = "Pygments is a syntax highlighting package written in Python."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "2.8.1"
 
 [[package]]
-category = "main"
-description = "Python binding to the Networking and Cryptography (NaCl) library"
 name = "pynacl"
+version = "1.4.0"
+description = "Python binding to the Networking and Cryptography (NaCl) library"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.4.0"
 
 [package.dependencies]
 cffi = ">=1.4.1"
@@ -719,61 +715,61 @@ six = "*"
 
 [package.extras]
 docs = ["sphinx (>=1.6.5)", "sphinx-rtd-theme"]
-tests = ["pytest (>=3.2.1,<3.3.0 || >3.3.0)", "hypothesis (>=3.27.0)"]
+tests = ["pytest (>=3.2.1,!=3.3.0)", "hypothesis (>=3.27.0)"]
 
 [[package]]
-category = "main"
-description = "Python parsing module"
 name = "pyparsing"
+version = "2.4.7"
+description = "Python parsing module"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "2.4.7"
 
 [[package]]
-category = "main"
-description = "A QR code generator written purely in Python with SVG, EPS, PNG and terminal output."
 name = "pyqrcode"
+version = "1.2.1"
+description = "A QR code generator written purely in Python with SVG, EPS, PNG and terminal output."
+category = "main"
 optional = false
 python-versions = "*"
-version = "1.2.1"
 
 [package.extras]
 PNG = ["pypng (>=0.0.13)"]
 
 [[package]]
-category = "main"
-description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
+version = "2.8.1"
+description = "Extensions to the standard Python datetime module"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-version = "2.8.1"
 
 [package.dependencies]
 six = ">=1.5"
 
 [[package]]
-category = "main"
-description = "World timezone definitions, modern and historical"
 name = "pytz"
+version = "2021.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2021.1"
 
 [[package]]
-category = "main"
-description = "YAML parser and emitter for Python"
 name = "pyyaml"
+version = "5.4.1"
+description = "YAML parser and emitter for Python"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
-version = "5.4.1"
 
 [[package]]
-category = "main"
-description = "A library for interacting with features of repl.it"
 name = "replit"
+version = "2.0.0"
+description = "A library for interacting with features of repl.it"
+category = "main"
 optional = false
 python-versions = ">=3.8,<4.0"
-version = "2.0.0"
 
 [package.dependencies]
 aiohttp = ">=3.6.2,<4.0.0"
@@ -782,12 +778,12 @@ typing_extensions = ">=3.7.4,<4.0.0"
 werkzeug = ">=1.0.1,<2.0.0"
 
 [[package]]
-category = "main"
-description = "Python HTTP for Humans."
 name = "requests"
+version = "2.25.1"
+description = "Python HTTP for Humans."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "2.25.1"
 
 [package.dependencies]
 certifi = ">=2017.4.17"
@@ -797,63 +793,61 @@ urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
 security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
-socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
+socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 
 [[package]]
-category = "main"
-description = "Python bindings for Selenium"
 name = "selenium"
+version = "3.141.0"
+description = "Python bindings for Selenium"
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.141.0"
 
 [package.dependencies]
 urllib3 = "*"
 
 [[package]]
-category = "main"
-description = "Python 2 and 3 compatibility utilities"
 name = "six"
+version = "1.15.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "1.15.0"
 
 [[package]]
-category = "main"
-description = "This package provides 29 stemmers for 28 languages generated from Snowball algorithms."
 name = "snowballstemmer"
+version = "2.1.0"
+description = "This package provides 29 stemmers for 28 languages generated from Snowball algorithms."
+category = "main"
 optional = false
 python-versions = "*"
-version = "2.1.0"
 
 [[package]]
-category = "main"
-description = "A modern CSS selector implementation for Beautiful Soup."
-marker = "python_version >= \"3.0\""
 name = "soupsieve"
+version = "2.2"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "2.2"
 
 [[package]]
-category = "main"
-description = "Python documentation generator"
 name = "sphinx"
+version = "3.5.2"
+description = "Python documentation generator"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "3.5.2"
 
 [package.dependencies]
-Jinja2 = ">=2.3"
-Pygments = ">=2.0"
 alabaster = ">=0.7,<0.8"
 babel = ">=1.3"
-colorama = ">=0.3.5"
+colorama = {version = ">=0.3.5", markers = "sys_platform == \"win32\""}
 docutils = ">=0.12"
 imagesize = "*"
+Jinja2 = ">=2.3"
 packaging = "*"
+Pygments = ">=2.0"
 requests = ">=2.5.0"
-setuptools = "*"
 snowballstemmer = ">=1.1"
 sphinxcontrib-applehelp = "*"
 sphinxcontrib-devhelp = "*"
@@ -868,94 +862,94 @@ lint = ["flake8 (>=3.5.0)", "isort", "mypy (>=0.800)", "docutils-stubs"]
 test = ["pytest", "pytest-cov", "html5lib", "cython", "typed-ast"]
 
 [[package]]
-category = "main"
-description = "sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books"
 name = "sphinxcontrib-applehelp"
+version = "1.0.2"
+description = "sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.0.2"
 
 [package.extras]
 lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
 
 [[package]]
-category = "main"
-description = "sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document."
 name = "sphinxcontrib-devhelp"
+version = "1.0.2"
+description = "sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document."
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.0.2"
 
 [package.extras]
 lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
 
 [[package]]
-category = "main"
-description = "sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files"
 name = "sphinxcontrib-htmlhelp"
+version = "1.0.3"
+description = "sphinxcontrib-htmlhelp is a sphinx extension which renders HTML help files"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.0.3"
 
 [package.extras]
 lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest", "html5lib"]
 
 [[package]]
-category = "main"
-description = "A sphinx extension which renders display math in HTML via JavaScript"
 name = "sphinxcontrib-jsmath"
+version = "1.0.1"
+description = "A sphinx extension which renders display math in HTML via JavaScript"
+category = "main"
 optional = false
 python-versions = ">=3.5"
-version = "1.0.1"
 
 [package.extras]
 test = ["pytest", "flake8", "mypy"]
 
 [[package]]
-category = "main"
-description = "sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document."
 name = "sphinxcontrib-qthelp"
-optional = false
-python-versions = ">=3.5"
 version = "1.0.3"
-
-[package.extras]
-lint = ["flake8", "mypy", "docutils-stubs"]
-test = ["pytest"]
-
-[[package]]
+description = "sphinxcontrib-qthelp is a sphinx extension which outputs QtHelp document."
 category = "main"
-description = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)."
-name = "sphinxcontrib-serializinghtml"
 optional = false
 python-versions = ">=3.5"
-version = "1.1.4"
 
 [package.extras]
 lint = ["flake8", "mypy", "docutils-stubs"]
 test = ["pytest"]
 
 [[package]]
+name = "sphinxcontrib-serializinghtml"
+version = "1.1.4"
+description = "sphinxcontrib-serializinghtml is a sphinx extension which outputs \"serialized\" HTML files (json and pickle)."
 category = "main"
-description = "Python Library for Tom's Obvious, Minimal Language"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+lint = ["flake8", "mypy", "docutils-stubs"]
+test = ["pytest"]
+
+[[package]]
 name = "toml"
+version = "0.10.2"
+description = "Python Library for Tom's Obvious, Minimal Language"
+category = "main"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "0.10.2"
 
 [[package]]
-category = "main"
-description = "tox is a generic virtualenv management and test command line tool"
 name = "tox"
+version = "3.23.0"
+description = "tox is a generic virtualenv management and test command line tool"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
-version = "3.23.0"
 
 [package.dependencies]
-colorama = ">=0.4.1"
+colorama = {version = ">=0.4.1", markers = "platform_system == \"Windows\""}
 filelock = ">=3.0.0"
 packaging = ">=14"
 pluggy = ">=0.12.0"
@@ -969,12 +963,12 @@ docs = ["pygments-github-lexers (>=0.0.5)", "sphinx (>=2.0.0)", "sphinxcontrib-a
 testing = ["flaky (>=3.4.0)", "freezegun (>=0.3.11)", "psutil (>=5.6.1)", "pytest (>=4.0.0)", "pytest-cov (>=2.5.1)", "pytest-mock (>=1.10.0)", "pytest-randomly (>=1.0.0)", "pytest-xdist (>=1.22.2)", "pathlib2 (>=2.3.3)"]
 
 [[package]]
-category = "main"
-description = "This is a simple, yet powerful command line translator with google translate behind it. You can also use it as a Python module in your code."
 name = "translate"
+version = "3.5.0"
+description = "This is a simple, yet powerful command line translator with google translate behind it. You can also use it as a Python module in your code."
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.5.0"
 
 [package.dependencies]
 click = "*"
@@ -984,12 +978,12 @@ requests = "*"
 tox = "*"
 
 [[package]]
-category = "main"
-description = "A python module made on top of PIL that draws emoji from text to image."
 name = "twemoji-parser"
+version = "0.4.3"
+description = "A python module made on top of PIL that draws emoji from text to image."
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "0.4.3"
 
 [package.dependencies]
 aiohttp = "*"
@@ -997,33 +991,33 @@ emoji = "*"
 pillow = "*"
 
 [[package]]
-category = "main"
-description = "Backported and Experimental Type Hints for Python 3.5+"
 name = "typing-extensions"
+version = "3.7.4.3"
+description = "Backported and Experimental Type Hints for Python 3.5+"
+category = "main"
 optional = false
 python-versions = "*"
-version = "3.7.4.3"
 
 [[package]]
-category = "main"
-description = "HTTP library with thread-safe connection pooling, file post, and more."
 name = "urllib3"
+version = "1.26.3"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
-version = "1.26.3"
 
 [package.extras]
 brotli = ["brotlipy (>=0.6.0)"]
 secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
-socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
-category = "main"
-description = "Fast implementation of asyncio event loop on top of libuv"
 name = "uvloop"
+version = "0.15.2"
+description = "Fast implementation of asyncio event loop on top of libuv"
+category = "main"
 optional = false
 python-versions = ">=3.7"
-version = "0.15.2"
 
 [package.extras]
 dev = ["Cython (>=0.29.20,<0.30.0)", "pytest (>=3.6.0)", "Sphinx (>=1.7.3,<1.8.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)", "sphinx-rtd-theme (>=0.2.4,<0.3.0)", "aiohttp", "flake8 (>=3.8.4,<3.9.0)", "psutil", "pycodestyle (>=2.6.0,<2.7.0)", "pyOpenSSL (>=19.0.0,<19.1.0)", "mypy (>=0.800)"]
@@ -1031,23 +1025,23 @@ docs = ["Sphinx (>=1.7.3,<1.8.0)", "sphinxcontrib-asyncio (>=0.2.0,<0.3.0)", "sp
 test = ["aiohttp", "flake8 (>=3.8.4,<3.9.0)", "psutil", "pycodestyle (>=2.6.0,<2.7.0)", "pyOpenSSL (>=19.0.0,<19.1.0)", "mypy (>=0.800)"]
 
 [[package]]
-category = "main"
-description = "A Wrapper for vacefron.nl/api written in Python."
 name = "vacefron.py"
+version = "1.6.1"
+description = "A Wrapper for vacefron.nl/api written in Python."
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "1.6.1"
 
 [package.dependencies]
 aiohttp = "*"
 
 [[package]]
-category = "main"
-description = "Virtual Python Environment builder"
 name = "virtualenv"
+version = "20.4.2"
+description = "Virtual Python Environment builder"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
-version = "20.4.2"
 
 [package.dependencies]
 appdirs = ">=1.4.3,<2"
@@ -1060,51 +1054,41 @@ docs = ["proselint (>=0.10.2)", "sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sp
 testing = ["coverage (>=4)", "coverage-enable-subprocess (>=1)", "flaky (>=3)", "pytest (>=4)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.1)", "pytest-mock (>=2)", "pytest-randomly (>=1)", "pytest-timeout (>=1)", "packaging (>=20.0)", "xonsh (>=0.9.16)"]
 
 [[package]]
-category = "main"
-description = "The comprehensive WSGI web application library."
 name = "werkzeug"
+version = "1.0.1"
+description = "The comprehensive WSGI web application library."
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "1.0.1"
 
 [package.extras]
 dev = ["pytest", "pytest-timeout", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinx-issues"]
 watchdog = ["watchdog"]
 
 [[package]]
-category = "main"
-description = "A built-package format for Python"
-name = "wheel"
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
-version = "0.36.2"
-
-[package.extras]
-test = ["pytest (>=3.0.0)", "pytest-cov"]
-
-[[package]]
-category = "main"
-description = "Yet another URL library"
 name = "yarl"
+version = "1.6.3"
+description = "Yet another URL library"
+category = "main"
 optional = false
 python-versions = ">=3.6"
-version = "1.6.3"
 
 [package.dependencies]
 idna = ">=2.0"
 multidict = ">=4.0"
 
 [[package]]
-category = "main"
-description = "YouTube video downloader"
 name = "youtube-dl"
+version = "2021.3.3"
+description = "YouTube video downloader"
+category = "main"
 optional = false
 python-versions = "*"
-version = "2021.3.3"
 
 [metadata]
-content-hash = "180281fcbcbccab1bfb22eda951e8c7ef54234fe1fff67bf105f7759aeb14ea5"
+lock-version = "1.1"
 python-versions = "^3.8"
+content-hash = "f5870d3b5c5f7de1ea2fa012dd087281cac33aca956c950dc1c0129bf39bf0db"
 
 [metadata.files]
 aiodns = [
@@ -1748,37 +1732,36 @@ pluggy = [
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
 ]
 polaroid = [
-    {file = "polaroid-0.3.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:3f30ae5e96c38487ed906f8b5a2be321ac2bd49f181b0c712b0aad22f0a0fc0d"},
-    {file = "polaroid-0.3.1-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:79c7bb70eeccfea6acdf2aee5f8d2e525adc65784f922a26bb60520d912bdc16"},
-    {file = "polaroid-0.3.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:1e62b63ee49b12038eec8e0990c0cb0b1dd59905a3aed987ad7367abc7187dee"},
-    {file = "polaroid-0.3.1-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:2097ba6f29a19c9b22178b610cec64f21cac5341b793d411264b15664ab1b497"},
-    {file = "polaroid-0.3.1-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:fc9668d20f5d353b2738551418df08926aa396ca2a15622e508a3947a89b7a65"},
-    {file = "polaroid-0.3.1-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:18ad8b7b705fbd509064445f1a3f22c3dc8c44bff793cebebc7b7bafec9bac2d"},
-    {file = "polaroid-0.3.1-cp36-cp36m-win_amd64.whl", hash = "sha256:0ecc438cd4461868eada58d0ec25ab9fc49a9d51e3768b579683b6c961026ad4"},
-    {file = "polaroid-0.3.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:86d92c327c3b76873e60ece30e935ad3bec84144af15373f745603728e2eae96"},
-    {file = "polaroid-0.3.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:56f2a5a72bddbae2855e09a132f8370d88f85e9ad0a8d6ef5abd3841d933af7c"},
-    {file = "polaroid-0.3.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:702cddc506a89153f8d809b0993f4b70c7fc8692019ceba06f8cf457c88a9773"},
-    {file = "polaroid-0.3.1-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:d24e5c19ba910a133d805728ad2de9efe49416fe3a00c6b5e6f2dc5a4cdf12b9"},
-    {file = "polaroid-0.3.1-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:d2abfefdc7e588e37cc4783a95fb264097a38ed92faf2eb352e771a0bd7476ec"},
-    {file = "polaroid-0.3.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:4f98208e7f54631613804bf8a8b155fda929b0428a5fae94c6ad62a15947e52b"},
-    {file = "polaroid-0.3.1-cp37-cp37m-win_amd64.whl", hash = "sha256:f5bd1fa32dded835dfa26f6540087056c87ceec61fca6ae53cbea3c6be8f12d5"},
-    {file = "polaroid-0.3.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:8b123630a75e396daf8e0ee1f435cb3176c71fd1508b3242211e7ffd4127ed5a"},
-    {file = "polaroid-0.3.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:530fe8c40f7533391c070a3b0a5bd3b6eb294e1e171371d8a081ccf661a02b4b"},
-    {file = "polaroid-0.3.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:e7a994938680e1b9e75ea1b83a141e0f9b52faa0586d64185f06b28627a29e6c"},
-    {file = "polaroid-0.3.1-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:04a03178b89707c4a505241688bb3f14e9d556452878a72fb5fda4d65df9d033"},
-    {file = "polaroid-0.3.1-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:3ce913031bfe391223423733cb9bf3430fe6bdaba300f11a23f07613422c6729"},
-    {file = "polaroid-0.3.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:9cb469c87420a91c6f784358c99c804e904b5c05dbccc1606d5418c95287e895"},
-    {file = "polaroid-0.3.1-cp38-cp38-win_amd64.whl", hash = "sha256:aeb96668e2c55805270449477b60e967ffebb5a782bb566ccd7cee1f6440f081"},
-    {file = "polaroid-0.3.1-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:10f1a21d98ba36882adb0f6c4aa51c8a62496e8beca123cb0b2ae0d1fd01b497"},
-    {file = "polaroid-0.3.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:671430e381615437b3cdbdd4e30b2c64850262759d5aab7509c4b36e1e8780cd"},
-    {file = "polaroid-0.3.1-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:7044912944ef6b1de720f8b8016ae2468f0a6613e719d576f3c3ee74598d6bd0"},
-    {file = "polaroid-0.3.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:f2ee7119e54c056b366a0fd310f5773201ccafecd579d1bb9a3417594ac2545a"},
-    {file = "polaroid-0.3.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:2542afb0535df80b46a6f485cc9d29986a7a873f885a40eb1f7e589b77473dc3"},
-    {file = "polaroid-0.3.1-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:9c93f8bacb8695b0d5387a5bf3878baa3a95527b9fb4ca5954f8428970e0529e"},
-    {file = "polaroid-0.3.1-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:09192b2f21cf2e704dd195a030b2e21ecc3c4996b29ef741ca519e01bc74ea8c"},
-    {file = "polaroid-0.3.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:9410ec9d4794bee79c8f2ae9af2ceedcc7032292ee7ea1ce37b429f3f426e54a"},
-    {file = "polaroid-0.3.1-cp39-cp39-win_amd64.whl", hash = "sha256:951ba74fc214892043408669e289e9752483841092240244a84fd376ab0db38c"},
-    {file = "polaroid-0.3.1.tar.gz", hash = "sha256:a1f11aa4f1a69176c79365e9567b7553002b629789d0c23f73748d1f8cf0deea"},
+    {file = "polaroid-0.3.2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:e46931bfc6d16c85938dd093cf2031eb50b4af829491b993e21d39f4da4ee86d"},
+    {file = "polaroid-0.3.2-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:b3c57e0f7a4b44b80c3d2a0763b24ca88823c150185633a749298e55f6b987fc"},
+    {file = "polaroid-0.3.2-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:02e48140fc2ca2f5520ab7a73dd756d08abd2d617a98b122d82b5ab1ac4f2238"},
+    {file = "polaroid-0.3.2-cp36-cp36m-manylinux2010_i686.whl", hash = "sha256:69bb978cee014dda411a809cb2831fbe585d05dfeee69ee6e03e7fb2001979e5"},
+    {file = "polaroid-0.3.2-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:c32113109dd9f4210850653d9ef7d6c4ea26be4e3df5d56af9716fa470757ad0"},
+    {file = "polaroid-0.3.2-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:d07f7ed014d2d4d2e63dec378bf2281442e7db3bd71853b3f67cb1d96f25284e"},
+    {file = "polaroid-0.3.2-cp36-cp36m-win_amd64.whl", hash = "sha256:fad94b89b367fb897ca914498cb134bfb0b6bea242c10770e09edb8181b5031a"},
+    {file = "polaroid-0.3.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:5cf7f2594fd69aec752556c6bb25cdddef4172815320167a96f1f8882007669f"},
+    {file = "polaroid-0.3.2-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:f501dba8ab3e35b53b3ce82ca55c7f41fb4fd9dbbe5d0b990be6ea51382eab58"},
+    {file = "polaroid-0.3.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:eb07547995585b90a0af26974e0b60675d2d34469b24eb7e5d66a5c15fd2765d"},
+    {file = "polaroid-0.3.2-cp37-cp37m-manylinux2010_i686.whl", hash = "sha256:0b669d760669e350bca19c3ed352b3e53af83dffadda887bce687452c941ba7e"},
+    {file = "polaroid-0.3.2-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:1ec13e5f41f00934041080553b23d00ae23aa2dd92d1d7abc8495b0799549b85"},
+    {file = "polaroid-0.3.2-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:842265a502721ed82f2b6a8ad83dca6cd88f66d3f64c113b017f7fbcc46b54f4"},
+    {file = "polaroid-0.3.2-cp37-cp37m-win_amd64.whl", hash = "sha256:aea8e110f17c77f30e3726af9310eaea4c1935e43799673bc122a5d371dd4ca5"},
+    {file = "polaroid-0.3.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:7aa6162fc100269f7e9beb47ffca13740af7140d6b59ee26ff3dbe2254bda2aa"},
+    {file = "polaroid-0.3.2-cp38-cp38-manylinux1_i686.whl", hash = "sha256:7b905f73c90c09eca4c35e77084ccdc671bf648c50612dca4132ea60ff3fbbea"},
+    {file = "polaroid-0.3.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:09bba6bee87454dd58a4996e66e0811d77b60c2b69425f20fe8097f6bca8f9f5"},
+    {file = "polaroid-0.3.2-cp38-cp38-manylinux2010_i686.whl", hash = "sha256:f9918c7dae764564e0706926ed630e6e30d0d7d3ebc49fc7ec7f280755637276"},
+    {file = "polaroid-0.3.2-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:4407d6cf81c9f8020dc76bc66c5d199f92ffbd96d4f5f10141869a7e8d4db29d"},
+    {file = "polaroid-0.3.2-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:67cc4cc04be67e57b045942d0d6bcebc18fa750e51af3a1b3b6e8cfdfaed5111"},
+    {file = "polaroid-0.3.2-cp38-cp38-win_amd64.whl", hash = "sha256:e8678599b55608319e89e8fb6c695dd29873f44cc66863dc29ddc4dde901f198"},
+    {file = "polaroid-0.3.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:f216c6328d88e19cd4430e8a63b4d48bb37a819c822c41625a95a904961bb366"},
+    {file = "polaroid-0.3.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:a5f02bc3439bf6da94ccffcd5b0ed1e40fe6d8fcf676bbd7ba65a47fb0f66416"},
+    {file = "polaroid-0.3.2-cp39-cp39-manylinux1_i686.whl", hash = "sha256:77511a9e4306571b88b42bd256088a508c9c5acc1e91422820594246d61bb49b"},
+    {file = "polaroid-0.3.2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:952ba111910292a1615858796b49f9f14e46baf35480492d592192af9a04501a"},
+    {file = "polaroid-0.3.2-cp39-cp39-manylinux2010_i686.whl", hash = "sha256:6c76fe783174aacb985713ffdf719a1be90ddcaea0ca10e0dac2f74386870566"},
+    {file = "polaroid-0.3.2-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:c0d23d471fb2f65c5769f796e3fa7b0d2838de2f6992b92eac1f295208d046ad"},
+    {file = "polaroid-0.3.2-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:03aad474a52cf7525ef991d0b5445c8e516eaef6747d2ba06cf94d31d89a0e7a"},
+    {file = "polaroid-0.3.2-cp39-cp39-win_amd64.whl", hash = "sha256:3c1f0202491bd6d543bfbc2b11e58d28ebaad75fa164c3f1db8476bdf5a8db29"},
+    {file = "polaroid-0.3.2.tar.gz", hash = "sha256:a51cff534b3889910044f47bf8727a4cd02d29669b1d353df8b07b87df457f55"},
 ]
 pre-commit = [
     {file = "pre_commit-2.10.1-py2.py3-none-any.whl", hash = "sha256:16212d1fde2bed88159287da88ff03796863854b04dc9f838a55979325a3d20e"},
@@ -1904,18 +1887,26 @@ pyyaml = [
     {file = "PyYAML-5.4.1-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:bb4191dfc9306777bc594117aee052446b3fa88737cd13b7188d0e7aa8162185"},
     {file = "PyYAML-5.4.1-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:6c78645d400265a062508ae399b60b8c167bf003db364ecb26dcab2bda048253"},
     {file = "PyYAML-5.4.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:4e0583d24c881e14342eaf4ec5fbc97f934b999a6828693a99157fde912540cc"},
+    {file = "PyYAML-5.4.1-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:72a01f726a9c7851ca9bfad6fd09ca4e090a023c00945ea05ba1638c09dc3347"},
+    {file = "PyYAML-5.4.1-cp36-cp36m-manylinux2014_s390x.whl", hash = "sha256:895f61ef02e8fed38159bb70f7e100e00f471eae2bc838cd0f4ebb21e28f8541"},
     {file = "PyYAML-5.4.1-cp36-cp36m-win32.whl", hash = "sha256:3bd0e463264cf257d1ffd2e40223b197271046d09dadf73a0fe82b9c1fc385a5"},
     {file = "PyYAML-5.4.1-cp36-cp36m-win_amd64.whl", hash = "sha256:e4fac90784481d221a8e4b1162afa7c47ed953be40d31ab4629ae917510051df"},
     {file = "PyYAML-5.4.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:5accb17103e43963b80e6f837831f38d314a0495500067cb25afab2e8d7a4018"},
     {file = "PyYAML-5.4.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:e1d4970ea66be07ae37a3c2e48b5ec63f7ba6804bdddfdbd3cfd954d25a82e63"},
+    {file = "PyYAML-5.4.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:cb333c16912324fd5f769fff6bc5de372e9e7a202247b48870bc251ed40239aa"},
+    {file = "PyYAML-5.4.1-cp37-cp37m-manylinux2014_s390x.whl", hash = "sha256:fe69978f3f768926cfa37b867e3843918e012cf83f680806599ddce33c2c68b0"},
     {file = "PyYAML-5.4.1-cp37-cp37m-win32.whl", hash = "sha256:dd5de0646207f053eb0d6c74ae45ba98c3395a571a2891858e87df7c9b9bd51b"},
     {file = "PyYAML-5.4.1-cp37-cp37m-win_amd64.whl", hash = "sha256:08682f6b72c722394747bddaf0aa62277e02557c0fd1c42cb853016a38f8dedf"},
     {file = "PyYAML-5.4.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:d2d9808ea7b4af864f35ea216be506ecec180628aced0704e34aca0b040ffe46"},
     {file = "PyYAML-5.4.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:8c1be557ee92a20f184922c7b6424e8ab6691788e6d86137c5d93c1a6ec1b8fb"},
+    {file = "PyYAML-5.4.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:fd7f6999a8070df521b6384004ef42833b9bd62cfee11a09bda1079b4b704247"},
+    {file = "PyYAML-5.4.1-cp38-cp38-manylinux2014_s390x.whl", hash = "sha256:bfb51918d4ff3d77c1c856a9699f8492c612cde32fd3bcd344af9be34999bfdc"},
     {file = "PyYAML-5.4.1-cp38-cp38-win32.whl", hash = "sha256:fa5ae20527d8e831e8230cbffd9f8fe952815b2b7dae6ffec25318803a7528fc"},
     {file = "PyYAML-5.4.1-cp38-cp38-win_amd64.whl", hash = "sha256:0f5f5786c0e09baddcd8b4b45f20a7b5d61a7e7e99846e3c799b05c7c53fa696"},
     {file = "PyYAML-5.4.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:294db365efa064d00b8d1ef65d8ea2c3426ac366c0c4368d930bf1c5fb497f77"},
     {file = "PyYAML-5.4.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:74c1485f7707cf707a7aef42ef6322b8f97921bd89be2ab6317fd782c2d53183"},
+    {file = "PyYAML-5.4.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:d483ad4e639292c90170eb6f7783ad19490e7a8defb3e46f97dfe4bacae89122"},
+    {file = "PyYAML-5.4.1-cp39-cp39-manylinux2014_s390x.whl", hash = "sha256:fdc842473cd33f45ff6bce46aea678a54e3d21f1b61a7750ce3c498eedfe25d6"},
     {file = "PyYAML-5.4.1-cp39-cp39-win32.whl", hash = "sha256:49d4cdd9065b9b6e206d0595fee27a96b5dd22618e7520c33204a4a3239d5b10"},
     {file = "PyYAML-5.4.1-cp39-cp39-win_amd64.whl", hash = "sha256:c20cfa2d49991c8b4147af39859b167664f2ad4561704ee74c1de03318e898db"},
     {file = "PyYAML-5.4.1.tar.gz", hash = "sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"},
@@ -2019,10 +2010,6 @@ virtualenv = [
 werkzeug = [
     {file = "Werkzeug-1.0.1-py2.py3-none-any.whl", hash = "sha256:2de2a5db0baeae7b2d2664949077c2ac63fbd16d98da0ff71837f7d1dea3fd43"},
     {file = "Werkzeug-1.0.1.tar.gz", hash = "sha256:6c80b1e5ad3665290ea39320b91e1be1e0d5f60652b964a3070216de83d2e47c"},
-]
-wheel = [
-    {file = "wheel-0.36.2-py2.py3-none-any.whl", hash = "sha256:78b5b185f0e5763c26ca1e324373aadd49182ca90e825f7853f4b2509215dc0e"},
-    {file = "wheel-0.36.2.tar.gz", hash = "sha256:e11eefd162658ea59a60a0f6c7d493a7190ea4b9a85e335b33489d9f17e0245e"},
 ]
 yarl = [
     {file = "yarl-1.6.3-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:0355a701b3998dcd832d0dc47cc5dedf3874f966ac7f870e0f3a6788d802d434"},
