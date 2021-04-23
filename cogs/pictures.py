@@ -101,9 +101,11 @@ class pictures(commands.Cog):
         async with self.bot_cdn_ratelimiter:
             async with self.bot.session.get(url) as resp:
                 content = resp.content_type
-                if "image" not in resp.content_type:
-                    if "webm" not in resp.content_type:
-                        return "Invalid image"
+                if (
+                    "image" not in resp.content_type
+                    and "webm" not in resp.content_type
+                ):
+                    return "Invalid image"
                 async with self.bot.session.post(
                     "https://theanimebot.is-ne.at/upload",
                     data={"image": await resp.read(), "noembed": "True"},
@@ -194,8 +196,7 @@ class pictures(commands.Cog):
     @asyncexe()
     def qr_dec(self, bytes_):
         with Image.open(bytes_) as img:
-            data = decode(img)[0].data.decode("utf-8")
-            return data
+            return decode(img)[0].data.decode("utf-8")
 
     @commands.group(invoke_without_command=True)
     async def qr(self, ctx, *, thing):

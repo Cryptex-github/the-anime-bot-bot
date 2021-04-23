@@ -408,7 +408,7 @@ class others(commands.Cog):
         if your prefix contain space:
         ovo prefix remove "prefixname "
         """
-        if not prefix_to_remove in self.bot.prefixes[ctx.guild.id]:
+        if prefix_to_remove not in self.bot.prefixes[ctx.guild.id]:
             return await ctx.send(
                 "This prefix don't exist maybe you made a typo? Case and space Sensitive"
             )

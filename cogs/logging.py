@@ -72,61 +72,60 @@ class logging(commands.Cog):
         ovo logging setup #logging True
         note that normal message will be slower then webhooks
         """
-        if ctx.guild.id not in self.bot.logging_cache.keys():
-            if nowebhook:
-                logging = await self.bot.db.fetchrow(
-                    "INSERT INTO logging (guild_id, channel_id, webhook, channel_create, channel_update, channel_delete, role_create, role_update, role_delete, guild_update, emojis_update, member_update, member_ban, member_unban, invite_change, member_join, member_leave, voice_channel_change, message_delete, message_edit) VALUES ($1, $2, $3, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4) RETURNING *;",
-                    ctx.guild.id,
-                    channel.id,
-                    "nowebhook",
-                    True,
-                )
-                self.bot.logging_cache[ctx.guild.id] = dict(logging.items())
-                return await ctx.send(
-                    f"Success, logging is enabled in this server, logging channel is {channel.mention} and no webhook is enabled"
-                )
-
-            try:
-                webhook = None
-                webhooks = await channel.webhooks()
-                for i in webhooks:
-                    if i.name == "The Anime Bot logging":
-                        webhook = i
-                        break
-                if not webhook:
-                    webhook = await channel.create_webhook(
-                        name="The Anime Bot logging",
-                        avatar=await self.bot.user.avatar_url_as(
-                            format="png"
-                        ).read(),
-                        reason="The Anime Bot logging",
-                    )
-            except discord.HTTPException:
-                if await channel.webhooks():
-                    webhook = random.choice(await channel.webhooks())
-                else:
-                    return await ctx.send(
-                        "Unable to create webhook in this channel maybe try a different channel?"
-                    )
-            except discord.Forbidden:
-                return await ctx.send(
-                    "I do not have permission to create webhook in that channel, please make sure I have `manage_webhook` permission"
-                )
+        if ctx.guild.id in self.bot.logging_cache.keys():
+            return await ctx.send(
+                f"Logging is already on use {ctx.prefix}logging off to turn it off"
+            )
+        if nowebhook:
             logging = await self.bot.db.fetchrow(
                 "INSERT INTO logging (guild_id, channel_id, webhook, channel_create, channel_update, channel_delete, role_create, role_update, role_delete, guild_update, emojis_update, member_update, member_ban, member_unban, invite_change, member_join, member_leave, voice_channel_change, message_delete, message_edit) VALUES ($1, $2, $3, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4) RETURNING *;",
                 ctx.guild.id,
                 channel.id,
-                webhook.url,
+                "nowebhook",
                 True,
             )
             self.bot.logging_cache[ctx.guild.id] = dict(logging.items())
-            await ctx.send(
-                f"Success, logging is enabled in this server, logging channel is {channel.mention}"
-            )
-        else:
             return await ctx.send(
-                f"Logging is already on use {ctx.prefix}logging off to turn it off"
+                f"Success, logging is enabled in this server, logging channel is {channel.mention} and no webhook is enabled"
             )
+
+        try:
+            webhook = None
+            webhooks = await channel.webhooks()
+            for i in webhooks:
+                if i.name == "The Anime Bot logging":
+                    webhook = i
+                    break
+            if not webhook:
+                webhook = await channel.create_webhook(
+                    name="The Anime Bot logging",
+                    avatar=await self.bot.user.avatar_url_as(
+                        format="png"
+                    ).read(),
+                    reason="The Anime Bot logging",
+                )
+        except discord.HTTPException:
+            if await channel.webhooks():
+                webhook = random.choice(await channel.webhooks())
+            else:
+                return await ctx.send(
+                    "Unable to create webhook in this channel maybe try a different channel?"
+                )
+        except discord.Forbidden:
+            return await ctx.send(
+                "I do not have permission to create webhook in that channel, please make sure I have `manage_webhook` permission"
+            )
+        logging = await self.bot.db.fetchrow(
+            "INSERT INTO logging (guild_id, channel_id, webhook, channel_create, channel_update, channel_delete, role_create, role_update, role_delete, guild_update, emojis_update, member_update, member_ban, member_unban, invite_change, member_join, member_leave, voice_channel_change, message_delete, message_edit) VALUES ($1, $2, $3, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4, $4) RETURNING *;",
+            ctx.guild.id,
+            channel.id,
+            webhook.url,
+            True,
+        )
+        self.bot.logging_cache[ctx.guild.id] = dict(logging.items())
+        await ctx.send(
+            f"Success, logging is enabled in this server, logging channel is {channel.mention}"
+        )
 
     @logging.command()
     @commands.has_permissions(manage_guild=True)
@@ -149,7 +148,7 @@ class logging(commands.Cog):
         """
         if ctx.guild.id not in self.bot.logging_cache.keys():
             return await ctx.send("Logging is not enabled")
-        if self.bot.logging_cache[ctx.guild.id].get(event) == None:
+        if self.bot.logging_cache[ctx.guild.id].get(event) is None:
             events = "\n".join(self.events)
             return await ctx.send(
                 f"That not a valid event a list of valid events \n{events}"
@@ -373,7 +372,6 @@ class logging(commands.Cog):
                 description=f"{', '.join(new_emojis)}",
                 timestamp=datetime.datetime.utcnow(),
             )
-            await self.send_webhook(guild.id, embed, "emojis_update")
         else:
             removed_emojis = [str(i) for i in before if i not in after]
             embed = discord.Embed(
@@ -382,7 +380,8 @@ class logging(commands.Cog):
                 description=f"{', '.join(removed_emojis)}",
                 timestamp=datetime.datetime.utcnow(),
             )
-            await self.send_webhook(guild.id, embed, "emojis_update")
+
+        await self.send_webhook(guild.id, embed, "emojis_update")
 
     @commands.Cog.listener()
     async def on_member_update(self, before, after):
@@ -405,10 +404,6 @@ class logging(commands.Cog):
                     description=f"Member: {after.mention}\nRoles: {', '.join(new_roles)}",
                     timestamp=datetime.datetime.utcnow(),
                 )
-                embed.set_footer(text=f"User ID: {after.id}")
-                return await self.send_webhook(
-                    after.guild.id, embed, "member_update"
-                )
             else:
                 roles = set(after.roles)
                 removed_roles = [
@@ -420,10 +415,11 @@ class logging(commands.Cog):
                     description=f"Member: {after.mention}\nRoles: {', '.join(removed_roles)}",
                     timestamp=datetime.datetime.utcnow(),
                 )
-                embed.set_footer(text=f"User ID: {after.id}")
-                return await self.send_webhook(
-                    after.guild.id, embed, "member_update"
-                )
+
+            embed.set_footer(text=f"User ID: {after.id}")
+            return await self.send_webhook(
+                after.guild.id, embed, "member_update"
+            )
 
     @commands.Cog.listener()
     async def on_member_ban(self, guild, user):
@@ -563,7 +559,7 @@ class logging(commands.Cog):
 
     @commands.Cog.listener()
     async def on_raw_bulk_message_delete(self, payload):
-        ids = "\n".join([str(i) for i in payload.message_ids])
+        ids = "\n".join(str(i) for i in payload.message_ids)
         embed = discord.Embed(
             color=self.bot.color,
             title="Bulk messages deleted",

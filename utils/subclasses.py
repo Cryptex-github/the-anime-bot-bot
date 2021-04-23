@@ -193,9 +193,8 @@ case_insensitive=True, allowed_mentions=discord.AllowedMentions.none())
 
         
   async def chunk_(self, ctx):
-      if ctx.guild:
-        if not ctx.guild.chunked:
-          await ctx.guild.chunk()
+    if ctx.guild and not ctx.guild.chunked:
+      await ctx.guild.chunk()
 
   async def before_invoke_(self, ctx):
     try:

@@ -68,9 +68,7 @@ class todo(commands.Cog):
             if i > len(todos):
                 return await ctx.send("You can't remove tasks you don't have")
         to_delete = [todos[num - 1]["created_at"] for num in index]
-        to_display = []
-        for i in index:
-            to_display.append(f"{i} - {todos[i-1]['content']}")
+        to_display = [f"{i} - {todos[i-1]['content']}" for i in index]
         await self.bot.db.execute(
             "DELETE FROM todos WHERE author_id = $1 AND created_at = ANY ($2)",
             ctx.author.id,
@@ -97,11 +95,11 @@ class todo(commands.Cog):
                     description=f"you have no todos `{ctx.prefix}todo add sometodos` to make one",
                 )
             )
-        lists = []
-        counter = 1
-        for i in todos:
-            lists.append(f"[{counter}]({i['jump_url']}). {i['content']}")
-            counter += 1
+        lists = [
+            f"[{counter}]({i['jump_url']}). {i['content']}"
+            for counter, i in enumerate(todos, start=1)
+        ]
+
         pages = menus.MenuPages(
             source=TodoMenuSource(lists), delete_message_after=True
         )

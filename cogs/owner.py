@@ -110,8 +110,8 @@ class owners(commands.Cog):
 
         stdout, stderr = await proc.communicate()
 
-        stdout = f"{stdout.decode()}" if not stdout == b"" else ""
-        stderr = f"\n{stderr.decode()}" if not stderr == b"" else ""
+        stdout = f"{stdout.decode()}" if stdout != b"" else ""
+        stderr = f"\n{stderr.decode()}" if stderr != b"" else ""
         return await ctx.send(
             embed=discord.Embed(
                 color=self.bot.color,
@@ -159,8 +159,7 @@ class owners(commands.Cog):
                     in_language = True
                     language.append(char)
                 elif in_language:
-                    if char != "\n":
-                        language.append(char)
+                    language.append(char)
 
                 last.append(char)
 
